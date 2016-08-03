@@ -1,0 +1,25 @@
+<div class="modal slide-in-up" ng-controller="QuestionDetailCtrl">
+   <header class="bar bar-header bar-secondary">
+      <h1 class="title">Record the Answer</h1>
+   </header>
+   <ion-content class="has-header padding" style="text-align: center;" has-tabs="true">
+     <div class="card">
+       <div class="item item-text-wrap">
+         <h3 style="margin-bottom: 10px;">The Question</h3>
+         {{question[0].item}}
+       </div>
+     </div>
+      <div class="actiondiv" style="display: flex; width: 100%;">
+        <ion-item class="therapistInfo" style="width: 50%;">
+          <img class="profileImage" ng-src="{{question[0].professional.face}}">
+          <h2>{{question[0].professional.name}}</h2>
+          <h5>${{question[0].professional.price}}</h5>
+          <p>{{question[0].professional.intro}}</p>
+        </ion-item>
+        <ion-item class="playItem" style="width: 50%;margin-left: 1%;background: #ef473a;">
+          <i class="icon ion-ios-undo-outline" style="font-size: 90px; color: white;"></i>
+          <h1 style="color: white;">Answer</h1>
+        </ion-item>
+      </div>
+   </ion-content>
+</div>

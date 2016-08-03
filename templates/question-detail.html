@@ -1,0 +1,35 @@
+<div class="modal slide-in-up" ng-controller="QuestionDetailCtrl">
+   <header class="bar bar-header bar-secondary" style="background: rgba(0,0,0,0);">
+     <h2 class="title">{{question[0].professional.name}}</h2>
+     <button class="button button-clear button-positive" ng-click="close()">Close</button>
+   </header>
+
+
+   <ion-content class="has-header" has-tabs="true">
+     <div class="item item-avatar" style="width: 50%; margin-left: 25%; margin-bottom: 10px;">
+       <img ng-src="{{question[0].professional.face}}">
+       <h2>{{question[0].professional.name}}</h2>
+       <p>${{question[0].professional.price}}</p>
+     </div>
+
+     <div class="item item-text-wrap" style="padding: 10px; margin-bottom: 10px;">
+       <p>
+         {{question[0].item}}
+       </p>
+     </div>
+
+     <button class="item item-icon-left assertive" href="#" style="width: 50%; margin-left: 25%;" on-touch="record()" on-release="stop()" ng-hide="{{hasAnswered}}"><i class="icon ion-android-microphone"></i>Hold to talk</button>
+     <h3 style="width: 50%; margin-left: 25%;" ng-hide="{{hasAnswered}}">Preview</h3>
+     <h3 style="width: 50%; margin-left: 25%;" ng-show="{{hasAnswered}}">Answered</h3>
+     <button type="button" name="button" class="button button-assertive" ng-click="playback()" style="width: 50%; margin-left: 25%; margin-top: 10px;" ng-hide="{{hasAnswered}}">Play</button>
+     <button type="button" name="button" class="button button-assertive" ng-click="stopPlayback()" style="width: 50%; margin-left: 25%; margin-top: 10px;" ng-hide="{{hasAnswered}}">Stop</button>
+
+     <button class="button button-balanced" style="width: 50%; margin-left: 25%; margin-top: 10px;" ng-click="save()" ng-disabled="{{hasAnswered}}">
+       <i class="icon ion-checkmark"></i>
+       Save
+     </button>
+   </ion-content>
+
+
+
+</div>

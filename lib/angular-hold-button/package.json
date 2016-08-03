@@ -1,0 +1,20 @@
+{
+    "name": "angular-hold-button",
+    "description": "An AngularJS directive that turns a regular <button> into one that has to be held for a configurable amount of time before it performs an action. It can be used instead of a confirmation dialog for destructive actions.",
+    "version": "1.0.1",
+    "author": "Pawel Decowski <pawel.decowski@gmail.com>",
+    "repository": "relishmedia/angular-hold-button",
+    "dependencies": {
+        "angular": "1.x",
+        "jquery": ">=1"
+    },
+    "devDependencies": {
+        "grunt-cli": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-less": "latest",
+        "grunt-contrib-coffee": "latest",
+        "grunt-contrib-cssmin": "latest",
+        "grunt-contrib-clean": "latest",
+        "grunt-contrib-watch": "latest"
+    }
+}
